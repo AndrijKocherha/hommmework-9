@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/nullstyle.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>task6</title>
+  </head>
+  <body>
+    <main class="page">
+      <div class="page__container">
+        <div class="task">
+          <div class="task__condition text">9. Дано масив імен. Сформувати масив з перших літер цих імен.</div>
+        </div>
+        <script>
+          function getNames(namescount) {
+            let arr = []
+            for (let i = 0; i < namescount; i++) {
+              let itemOfArrey = prompt(`Введіть імя #${i + 1}`)
+              arr.push(itemOfArrey)
+            }
+            return arr
+          }
+          let namescount = parseInt(prompt("Введіть кількість імен"))
+          let arreyWithNames = getNames(namescount)
+          let firstLettersOfNames = []
+          for (let name of arreyWithNames) {
+            firstLettersOfNames.push(name[0])
+          }
+          for (const firstLetter of firstLettersOfNames) {
+            document.write(`${firstLetter} <br/>`)
+          }
+        </script>
+      </div>
+    </main>
+  </body>
+</html>

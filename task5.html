@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/nullstyle.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>task5</title>
+  </head>
+  <body>
+    <main class="page">
+      <div class="page__container">
+        <div class="task">
+          <div class="task__condition text">8. Дано масив номерів авто. Сформувати новий масив тих, які починаються на «А»</div>
+        </div>
+        <script>
+          function getCarnumbers(carNumbersCount) {
+            let arr = []
+            for (let i = 0; i < carNumbersCount; i++) {
+              let itemOfArrey = prompt(`Введіть номера автомобіля #${i + 1}`)
+              arr.push(itemOfArrey)
+            }
+            return arr
+          }
+          let carNumbersCount = parseInt(prompt("Введіть кількість номерів машин"))
+          let arreyWithCarNumbers = getCarnumbers(carNumbersCount)
+          let numbersStartWithA = []
+          for (let carNumber of arreyWithCarNumbers) {
+            if (carNumber[0] === "A") numbersStartWithA.push(carNumber)
+          }
+          for (const numberStartWithA of numbersStartWithA) {
+            document.write(`${numberStartWithA} <br/>`)
+          }
+        </script>
+      </div>
+    </main>
+  </body>
+</html>

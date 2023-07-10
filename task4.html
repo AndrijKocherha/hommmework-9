@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/nullstyle.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>task4</title>
+  </head>
+  <body>
+    <main class="page">
+      <div class="page__container">
+        <div class="task">
+          <div class="task__condition text">7.Дано масив цін. Змінити цей масив так, що на ціни товарів, які більші за 1000 грн. дати 30% знижки.</div>
+        </div>
+        <script>
+          function fillPricesArr(pricesCount) {
+            let arr = []
+            for (let i = 0; i < pricesCount; i++) {
+              let itemOfArrey = parseInt(prompt(`Введіть ціну товару #${i + 1}`))
+              arr.push(itemOfArrey)
+            }
+            return arr
+          }
+          let pricesCount = parseInt(prompt("Введіть кількість товарів"))
+          let arreyWithPrices = fillPricesArr(pricesCount)
+          let discountPercent = 30
+          arreyWithPrices.forEach((price, indx, prices) => {
+            if (price > 1000) document.write(`було ${price} - стало ${(prices[indx] * (100 - discountPercent)) / 100} <br/>`)
+          })
+        </script>
+      </div>
+    </main>
+  </body>
+</html>

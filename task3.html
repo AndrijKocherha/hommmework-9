@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/nullstyle.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>task3</title>
+  </head>
+  <body>
+    <main class="page">
+      <div class="page__container">
+        <div class="task">
+          <div class="task__condition text">6.Дано масив елементів. Усі елементи, які більші за перший елемент помножити на 2</div>
+        </div>
+        <script>
+          function fillArr(itemsCount) {
+            let arr = []
+            for (let i = 0; i < itemsCount; i++) {
+              let itemOfArrey = parseInt(prompt(`Введіть число #${i + 1}`))
+              arr.push(itemOfArrey)
+            }
+            return arr
+          }
+          let itemsCount = parseInt(prompt("Введіть кількість елементів масиву"))
+          let arreyWithNumbers = fillArr(itemsCount)
+          let firstItemOfAreey = arreyWithNumbers[0]
+          arreyWithNumbers.forEach((arreyItem, indx, numbers) => {
+            if (arreyItem > firstItemOfAreey) document.write(`${(numbers[indx] *= 2)} <br/>`)
+          })
+        </script>
+      </div>
+    </main>
+  </body>
+</html>

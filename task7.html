@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/nullstyle.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>task7</title>
+  </head>
+  <body>
+    <main class="page">
+      <div class="page__container">
+        <div class="task">
+          <div class="task__condition text">10. Дано масив цін у грн. Податок складає 20%. Сформувати масив, який буде містити величину сплаченого податку у грн.</div>
+        </div>
+        <script>
+          function fillPricesArr(pricesCount) {
+            let arr = []
+            for (let i = 0; i < pricesCount; i++) {
+              let itemOfArrey = parseInt(prompt(`Введіть ціну #${i + 1}`))
+              arr.push(itemOfArrey)
+            }
+            return arr
+          }
+          let pricesCount = parseInt(prompt("Введіть кількість цін "))
+          let arreyWithPrices = fillPricesArr(pricesCount)
+          let percentOfTax = 20
+          let newArrWithTaxes = []
+          for (let price of arreyWithPrices) {
+            newArrWithTaxes.push((price * (100 - percentOfTax)) / 100)
+          }
+          for (const tax of newArrWithTaxes) {
+            document.write(`${tax} <br/>`)
+          }
+        </script>
+      </div>
+    </main>
+  </body>
+</html>
